@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-5 col-sm-5">
+    <label for="formGroupExampleInput" class="form-label">Claim Engine</label>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <!-- <button type="button" class="btn btn-outline-secondary">Proclaim</button>
+    <button type="button" class="btn btn-outline-secondary">Facets</button>
+    <button type="button" class="btn btn-outline-secondary">PMHS</button> -->
+      <button
+        type="button"
+        class="btn btn-outline-secondary cusClass"
+        *ngFor="let data of claimData"
+        (click)="buttonClick(this.data)"
+      >
+        {{ data }}
+      </button>
+    </div>
+  </div>
+  <div class="col-5 col-sm-5">
+    <label for="formGroupExampleInput" class="form-label">Search By</label>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button
+        type="button"
+        class="btn btn-outline-secondary cusSearchClass"
+        *ngFor="let data of searchData"
+        (click)="buttonClick(this.data)"
+      >
+        {{ data }}
+      </button>
+    </div>
+  </div>
+</div>

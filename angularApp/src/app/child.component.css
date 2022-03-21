@@ -1,0 +1,22 @@
+button:focus {
+  background: #6c757d;
+  color: #fff;
+}
+button:active {
+  background: #6c757d;
+  color: #fff;
+}
+button:first-child {
+  background: #6c757d;
+  color: #fff;
+}
+.cusClass:active {
+  background: #6c757d;
+  background-color: #6c757d;
+  color: #fff;
+}
+.cusSearchClass:active {
+  background: #6c757d;
+  background-color: #6c757d;
+  color: #fff;
+}

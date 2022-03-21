@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 col-sm-3 alert alert-light">
+      <label class="form-label"><strong>Member Lookup</strong></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <child (sentDataEvent)="dataReceived($event)"></child>
+    </div>
+    <div class="col-sm-4">
+      <label class="form-label">{{ searchLabel }}</label>
+      <input type="text" class="form-control" name="search" id="search" />
+    </div>
+  </div>
+</div>
+<form [formGroup]="memberLookupForm" (ngSubmit)="onSubmit()" class="row g-3">
+  <div class="container d-grid gap-3">
+    <div class="row">
+      <div class="col-4 col-sm-3">
+        <label class="form-label">SSN</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="345-78-2345"
+          name="ssn"
+          formControlName="ssn"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-3">
+        <label class="form-label">Account Number(Optional)</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="342345"
+          name="accountNumber"
+          formControlName="accountNumber"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-3">
+        <label class="form-label">Date Of Service</label>
+        <input
+          type="date"
+          class="form-control"
+          name="dos"
+          formControlName="dos"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-1 col-sm-3">
+        <button type="reset" class="btn btn-secondary">Clear</button>
+      </div>
+      <div class="col-1 col-sm-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
